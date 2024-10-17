@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <script>
+        function loginSubmit() {
+            alert("서버로 전송합니다!0"); 
+        }
+    </script>
+</head> 
+<body>
+    <h1>Form Element or Tag</h1>
+    <!--폼태그==> 서버에 전송 -->
+    <form action="#" method="get">
+        <fieldset>
+            <legend>로그인 화면</legend>
+        
+        <!--get : 소켓의 Head에 쿼리스트링 방식 :: ~~주소?name=value&name=value&... -->
+        <!--post : 소켓의 Body에 데이터 저장 -->
+        <ul>
+            <li>
+                <label for="">ID</label>
+                <input type="text" name="id" placeholder="ID 입력">
+            </li>
+            <li>
+                <label for="">Password</label>
+                <input type="password" name="pwd" placeholder="password 입력">
+            </li>
+
+        </ul>
+    </fieldset>
+
+        <fieldset>
+            <legend>옵션사항</legend>
+            <ul>
+                <li>
+                    <label for="">주소</label>
+                    <select name="address">
+                        <option value="선택">선택</option>
+                        <option value="서울시">서울시</option>
+                        <option value="경기도">경기도</option>
+                        <option value="강원도">강원도</option>
+                        <option value="경상남도">경상남도</option>
+                        <option value="경상북도">경상북도</option>
+                        <option value="전라남도">전라남도</option>
+                        <option value="전라북도">전라북도</option>
+                        <option value="인천">인천</option>
+                        <option value="제주도">제주도</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="">성별</label>
+                    <input type="radio" name="role" value="남성">
+                    <span>남성</span>
+                    <input type="radio" name="role" value="여성">
+                    <span>여성</span>
+                    <input type="radio" name="role" value="양성">
+                    <span>양성</span>
+                </li>
+                <li>
+                    <label for="">취미</label>
+                    <input type="checkbox" name="subject" value="운동">
+                    <span>운동</span>
+                    <input type="checkbox" name="subject" value="음악">
+                    <span>음악</span>
+                    <input type="checkbox" name="subject" value="게임">
+                    <span>게임</span>
+                    <input type="checkbox" name="subject" value="공부">
+                    <span>공부</span>
+                </li>
+                <li>
+                    <label for="">자기소개</label>
+                    <textarea name="intro" cols="50" rows="10"
+                        placeholder="200자 이내로 작성해주세요."></textarea>
+                </li>
+
+
+
+            </ul>
+        </fieldset>
+
+
+        <div>
+            <!--디폴트 type : submit(폼의 주소 서버로 데이터 전송!!) -->
+            <button type="button" onclick="loginSubmit()">Login</button>
+            <button type="reset">Reset</button>
+            <button>
+                <img src="/woo/images/logoRed.png"
+                    width="70px" >
+            </button>
+        </div>
+        
+    </form>
+</body>
+</html>
